@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Major>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Major</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>
+            IdMajor
+        </th>
+        <th>
+            Major Name
+        </th>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.MajorId
+                </td>
+                <td>
+                    @obj.MajorName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
